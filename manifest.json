@@ -29,16 +29,7 @@
     "service_worker": "background.js"
   },
   "options_page": "settings.html",
-  "web_accessible_resources": [
-    {
-      "resources": [
-        ".env"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ],
+
   "content_scripts": [
     {
       "matches": [

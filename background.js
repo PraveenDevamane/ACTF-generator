@@ -6,27 +6,8 @@
 const HF_API_URL = 'https://router.huggingface.co/v1/chat/completions';
 const HF_MODEL = 'Qwen/Qwen2.5-72B-Instruct';
 
-// ─── Auto-load token from .env on install/update ─────────────────────
-chrome.runtime.onInstalled.addListener(async () => {
-  try {
-    const envUrl = chrome.runtime.getURL('.env');
-    const res = await fetch(envUrl);
-    if (!res.ok) return;
-    const text = await res.text();
-    const match = text.match(/HF_API_TOKEN\s*=\s*(.+)/);
-    if (match) {
-      const token = match[1].trim();
-      if (token && token !== 'your_huggingface_token_here') {
-        const existing = await new Promise(r => chrome.storage.sync.get(['hf_token'], r));
-        if (!existing.hf_token) {
-          chrome.storage.sync.set({ hf_token: token });
-          console.log('ACTF: Token loaded from .env');
-        }
-      }
-    }
-  } catch (e) {
-    console.log('ACTF: No .env found, use settings page instead.');
-  }
+chrome.runtime.onInstalled.addListener(() => {
+  console.log('ACTF Extension installed. Please configure your Hugging Face API token in the settings.');
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
