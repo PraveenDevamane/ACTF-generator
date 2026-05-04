@@ -1,51 +1,189 @@
-# AI Context Transfer (ACTF) Generator
+<div align="center">
 
-Export AI conversations as structured ACTF JSON for seamless context transfer between AI platforms (ChatGPT, Claude, Gemini).
+<br/>
 
-## Features
-- Extracts conversation history directly from your AI chat interfaces.
-- Uses Hugging Face's API to summarize and structure the conversation into JSON format.
-- Easily copy the structured context or download it as a file.
-- Generate continuation prompts to seamlessly resume conversations on other platforms.
+```
+ █████╗  ██████╗████████╗███████╗
+██╔══██╗██╔════╝╚══██╔══╝██╔════╝
+███████║██║        ██║   █████╗  
+██╔══██║██║        ██║   ██╔══╝  
+██║  ██║╚██████╗   ██║   ██║     
+╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝    
+```
 
-## Installation & Setup
+# AI Context Transfer Generator
 
-Since this extension is not yet published on the Chrome Web Store, you can install it manually:
+**Export AI conversations as structured JSON. Resume anywhere.**
 
-1. **Clone or Download the Repository:**
-   Download the source code as a ZIP file and extract it, or clone the repository using Git:
-   ```bash
-   git clone https://github.com/PraveenDevamane/ACTF-generator.git
-   ```
+[![MIT License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+[![Chrome Extension](https://img.shields.io/badge/Platform-Chrome%20%7C%20Edge%20%7C%20Brave-4285F4?style=flat-square&logo=googlechrome&logoColor=white)](https://github.com/PraveenDevamane/ACTF-generator)
+[![Hugging Face](https://img.shields.io/badge/Powered%20by-Hugging%20Face-FF6B35?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co)
+[![Status](https://img.shields.io/badge/Status-Active-27c93f?style=flat-square)]()
 
-2. **Load the Extension in Chrome:**
-   - Open your Chromium-based browser (Chrome, Edge, Brave).
-   - Navigate to the extensions page: `chrome://extensions/`.
-   - Toggle **Developer mode** on (usually located in the top right corner).
-   - Click **Load unpacked**.
-   - Select the folder where you extracted or cloned the repository.
+<br/>
 
-3. **Configure the API Token:**
-   - Click the extension icon in your browser toolbar to open the popup.
-   - Click the **Settings** gear icon.
-   - Paste your **Hugging Face API Token**. You can get a free token by creating an account on [Hugging Face](https://huggingface.co/settings/tokens) and generating a new Access Token.
-   - Click **Save**. You can also use the **Test Connection** button to verify it works.
+*Switch between ChatGPT, Claude, and Gemini without losing your train of thought.*
 
-## Security & Privacy 🔒
+<br/>
 
-**Your API keys are completely safe.** 
-- We **DO NOT** store, collect, or transmit your Hugging Face API token to any third-party servers. 
-- Your token is saved securely and locally in your browser using `chrome.storage.sync`.
-- The extension communicates directly with the Hugging Face API from your browser.
-- There are no environment (`.env`) files needed or included in this repository, ensuring no accidental leaks of your personal API keys to GitHub.
+---
 
-## Usage
+</div>
 
-1. Open a conversation in [ChatGPT](https://chatgpt.com/), [Claude](https://claude.ai/), or [Gemini](https://gemini.google.com/).
-2. A floating **"Export Context"** button will appear on the screen. Click it.
-3. The extension will extract the visible conversation, process it, and convert it into a structured format.
-4. Click the extension icon in your toolbar to view the generated context, copy it, or download it as a JSON file!
+## ✦ What is ACTF?
 
-## License
+**ACTF (AI Context Transfer Format)** is a structured JSON schema designed to capture the full context of an AI conversation — topics, decisions, code, tone — so it can be reconstructed faithfully on any other AI platform.
 
-MIT License
+No more copy-pasting walls of text. No more re-explaining your project from scratch.
+
+<br/>
+
+## ✦ Features
+
+| | Feature | Description |
+|---|---|---|
+| ⚡ | **One-click export** | A floating button appears on any AI chat page — click to capture instantly |
+| 🤗 | **AI-powered structuring** | Hugging Face API summarizes and structures the raw chat into clean ACTF JSON |
+| 📋 | **Copy or download** | Get your context as a `.json` file or copy straight to clipboard |
+| 🔁 | **Continuation prompts** | Auto-generates a ready-to-paste prompt so your next AI session picks up exactly where you left off |
+| 🔒 | **Fully local & private** | Your API token never leaves your browser — ever |
+
+<br/>
+
+## ✦ Supported Platforms
+
+<div align="center">
+
+| Platform | Supported |
+|---|:---:|
+| 💬 ChatGPT (`chatgpt.com`) | ✅ |
+| 🟠 Claude (`claude.ai`) | ✅ |
+| 🔷 Gemini (`gemini.google.com`) | ✅ |
+
+</div>
+
+<br/>
+
+---
+
+## ✦ Installation
+
+> Not yet on the Chrome Web Store — install manually in under 2 minutes.
+
+<br/>
+
+**Step 1 — Clone the repository**
+
+```bash
+git clone https://github.com/PraveenDevamane/ACTF-generator.git
+```
+
+Or [download the ZIP](https://github.com/PraveenDevamane/ACTF-generator/archive/refs/heads/main.zip) and extract it.
+
+<br/>
+
+**Step 2 — Load unpacked in your browser**
+
+```
+chrome://extensions/
+```
+
+1. Toggle **Developer mode** ON (top-right corner)
+2. Click **Load unpacked**
+3. Select the cloned / extracted folder
+
+Works on Chrome, Edge, and Brave.
+
+<br/>
+
+**Step 3 — Add your Hugging Face token**
+
+```
+https://huggingface.co/settings/tokens
+→ New token → Role: read → Generate
+```
+
+Then:
+1. Click the extension icon in your toolbar
+2. Open **Settings** ⚙️
+3. Paste your token → **Save**
+4. Hit **Test Connection** to verify it works
+
+<br/>
+
+---
+
+## ✦ How to Use
+
+```
+  1. Open a chat          →    ChatGPT / Claude / Gemini
+       ↓
+  2. Click "Export"       →    Floating button on the page
+       ↓
+  3. Context structured   →    HF API converts to ACTF JSON
+       ↓
+  4. Copy or download     →    Paste into any new AI session
+```
+
+<br/>
+
+---
+
+## ✦ Security & Privacy
+
+```
+🔒  Your API token is stored locally via chrome.storage.sync
+    It is NEVER sent to any third-party server.
+
+✓   Extension talks directly to Hugging Face — no middlemen
+✓   No .env files in the repo — zero risk of key leaks to GitHub  
+✓   Fully open source — every line is auditable
+```
+
+> **Short version:** Your keys stay in your browser. Always.
+
+<br/>
+
+---
+
+## ✦ Project Structure
+
+```
+ACTF-generator/
+├── manifest.json          # Extension manifest (MV3)
+├── popup/
+│   ├── popup.html         # Extension popup UI
+│   ├── popup.js           # Popup logic
+│   └── popup.css          # Styles
+├── content/
+│   └── content.js         # Injected script — extracts chat content
+├── background/
+│   └── service-worker.js  # Background service worker
+└── icons/                 # Extension icons
+```
+
+<br/>
+
+---
+
+## ✦ License
+
+```
+MIT License — free to use, modify, and distribute.
+See LICENSE for full terms.
+```
+
+<br/>
+
+---
+
+<div align="center">
+
+Made with focus by **[Praveen Devamane](https://github.com/PraveenDevamane)**
+
+*If this helped you — drop a ⭐ on the repo.*
+
+[![GitHub stars](https://img.shields.io/github/stars/PraveenDevamane/ACTF-generator?style=flat-square&color=yellow)](https://github.com/PraveenDevamane/ACTF-generator/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/PraveenDevamane/ACTF-generator?style=flat-square&color=blue)](https://github.com/PraveenDevamane/ACTF-generator/network)
+
+</div>
